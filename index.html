@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coffee Rating App</title>
+</head>
+<body>
+    <h1>Coffee Rating App</h1>
+
+    {% for coffee in coffees %}
+        <h2>{{ coffee[1] }}</h2>
+        <p>Votes: {{ coffee[2] }}</p>
+        <a href="/vote/{{ coffee[0] }}">
+            <button>Vote +</button>
+        </a>
+        <hr>
+    {% endfor %}
+
+</body>
+</html>
